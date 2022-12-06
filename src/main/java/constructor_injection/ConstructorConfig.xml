@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:c="http://www.springframework.org/schema/c"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- Constructor injection using primitive,non-primitive,and collection-tpye -->
+
+
+<bean class="constructor_injection.certi" name="cer" c:name="java-certification-course">
+ <!-- <constructor-arg>
+ <value>java-certification</value>
+ </constructor-arg> -->
+ 
+</bean>
+
+<bean class="constructor_injection.person" name="person1" c:name="Ankit shailendra singh" c:personid="101"  c:certi-ref="cer" >
+    <!-- <constructor-arg value="Ankit Singh" />
+    <constructor-arg value="1" type="int" />
+    <constructor-arg ref="cer" /> -->
+
+    <!-- using collection-type -->
+    <constructor-arg name="list">
+    <list>
+  <value>ankit</value>
+  <value>amit</value>
+  <value>aman</value>
+  <null/>
+  </list>
+    </constructor-arg>
+
+     <constructor-arg  name="set">
+    <set>
+  <value>Singh</value>
+  <value>Pandey</value>
+  <value>Yadav</value>
+  <value>Yadav</value>
+  <null/>
+  </set>
+    </constructor-arg>
+
+      <constructor-arg  name="map">
+    <map>
+ <entry key="101" value="Ankit Singh" />
+ <entry key="102" value="Amit Singh" />
+ <entry key="103" value="Aman Singh" />
+  
+  </map>
+    </constructor-arg>
+
+
+
+
+</bean>
+<!-- we have injected object cer from certi.java to person.java to inject all the values from certi to person -->
+
+</beans>
+
+
+
+
+

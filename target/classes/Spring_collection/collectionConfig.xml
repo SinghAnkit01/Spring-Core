@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    
+    <!-- Make sure that field(id,phone,address,courses) name should be proper in every tag-->
+    <!-- this is our beans -->
+    
+    
+
+    <!-- Collection-Types -->
+
+      <!-- List Collection Type  -->
+    <!-- creating list and injecting through configuration file -->
+    <bean name="employee1" class="Spring_collection.employee">
+
+    <!-- list -->
+    <property name="name"  value="Ankit Singh"/>
+
+    <property name="phones">
+  <list>
+  <value>7777777777</value>
+  <value>5555555555</value>
+  <value>799292929</value>
+  <null/>
+  </list>
+    </property>
+
+    <!-- set -->
+    <!-- Set Collection Type  -->
+      <!-- creating set and injecting through configuration file -->
+
+      <property name="address">
+  <set>
+  <value>sawarkar nagar thane-w pincode-06</value>
+  <value>indira nagar thane-w pincode-06</value>
+  <value>vartak nagar thane-w pincode-06</value>
+  
+
+
+  </set>
+    </property>
+
+    <!-- map -->
+     <!-- Map Collection Type  -->
+      <!-- creating map and injecting through configuration file -->
+
+         <property name="courses">
+  <map>
+  <entry key="Java" value="4Months" />
+  <entry key="Spring" value="2Months" />
+  <entry key="Core-java" value="1Months" />
+
+
+  </map>
+    </property>
+
+
+
+  
+    </bean>
+
+      
+
+
+     
+
+
+      <!-- Properties Collection Type  -->
+      <!-- creating Properties and injecting through configuration file -->
+
+
+    
+
+
+</beans>
+
+
+

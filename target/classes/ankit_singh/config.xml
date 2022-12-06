@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="student1" class="ankit_singh.student">  
+    <!-- Make sure that field(id,name,address) name should be proper -->
+    <!-- this is our beans -->
+    
+    <!-- 1 method -->
+       <property name="id">
+       <value>1</value>
+       </property>
+
+        <property name="name">
+       <value>Ankit Singh</value>
+       </property>
+
+        <property name="address">
+       <value>Sawarkar nagar thane(W)-06</value>
+       </property>
+
+      
+
+      
+    <!-- this is our metadata to know java about student class while creating object of student class -->
+    </bean>
+
+    <!-- 2 method -->
+
+     <bean name="student2" class="ankit_singh.student"> 
+       <property name="id" value="2" />
+       <property name="name" value="ayush singh" />
+       <property name="address" value="indira nagar thane-w 06" />
+
+ </bean>
+
+ <!-- 3 method -->
+
+  <bean name="student3" class="ankit_singh.student"  p:id="3" p:name="amit singh" p:address="sawarkar nagar thane-w" /> 
+
+    <!-- Collection-Types -->
+
+      <!-- List Collection Type  -->
+    <!-- creating list and injecting through configuration file -->
+
+      <!-- Set Collection Type  -->
+      <!-- creating set and injecting through configuration file -->
+
+
+      <!-- Map Collection Type  -->
+      <!-- creating map and injecting through configuration file -->
+
+
+      <!-- Properties Collection Type  -->
+      <!-- creating Properties and injecting through configuration file -->
+
+
+    
+
+
+</beans>
+
+
+
